@@ -33,7 +33,7 @@ class TestSequenceFunctions(unittest.TestCase):
   def test_EasyXml_escaping(self):
     original = '<test>\'"\r&\nfoo'
     converted = '&lt;test&gt;\'&quot;&#xD;&amp;&#xA;foo'
-    converted_apos = converted.replace("'", '&apos;')
+    converted_apos = converted.replace("'", '&#39;')
     self.assertEqual(
       easy_xml.XmlToString(['test3', {'a': original}, original]),
       '<?xml version="1.0" encoding="utf-8"?><test3 a="%s">%s</test3>' %

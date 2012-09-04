@@ -133,7 +133,7 @@ def WriteXmlIfChanged(content, path, encoding='utf-8', pretty=False,
 
 _xml_escape_map = {
     '"': '&quot;',
-    "'": '&apos;',
+    "'": '&#39;',
     '<': '&lt;',
     '>': '&gt;',
     '&': '&amp;',
